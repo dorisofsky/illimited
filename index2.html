@@ -3,11 +3,11 @@
 <head>
 	<meta charset="utf-8">
 	<title>前端，沒有極限Demo</title>
-	<script type="text/javascript" src="http://d3js.org/d3.v3.min.js"></script>
+	<script src="http://d3js.org/d3.v3.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="http://dorisofsky.github.io/illimited/index.css">
 </head>
 <body>
-	<script>
+	<script type="text/javascript">
 
 		var dataset = []; //建立空的資料陣列
 
@@ -23,8 +23,8 @@
 			.append('div') // 這邊加入的div已經有包含data
 			.attr('class','bar') //套用class
 			.style('height', function(d){ //將data的值取出作為高
-				return (d*3)  + 'px';
-			})
+				return (d*3)  + 'px'
+			});
 
 	</script>
 
