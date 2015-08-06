@@ -9,13 +9,13 @@
 <body>
 	<script type="text/javascript">
 
-		var dataset = []; //建立空的資料陣列
+		var dataset = [35,20,40]; //建立空的資料陣列
 
-		for (var i=0; i < 20; i++){
+/*		for (var i=0; i < 20; i++){
 			var newNum = 5 + Math.floor(Math.random() * 30);
 			dataset.push(newNum);
 		}
-		//隨機產生一組長度20，值為5~35的數字。
+		//隨機產生一組長度20，值為5~35的數字。*/
 
 		d3.select('.demo').selectAll('div')  //選取 class內的div
 			.data(dataset) // 將資料加入至 div
