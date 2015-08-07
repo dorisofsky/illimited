@@ -58,12 +58,12 @@
 
 		var xScale = d3.scale.linear() //產生一個屬於X軸的線性尺度
 			.domain([Xmin, Xmax]) //傳入的值是原始資料的最小及最大值
-			.range([padding , w - padding]) 
+			.range([0 , 100]) 
 			//輸出的範圍是左邊的padd距離，到右邊的padding
 
 		var yScale = d3.scale.linear()
 			.domain([Ymin, Ymax])
-			.range([ h - padding ,padding])
+			.range([ 0 ,100])
 			//類似X軸的尺度
 
 		var svg = d3.select('.demo').append('svg').attr({'width': w,'height': h})
