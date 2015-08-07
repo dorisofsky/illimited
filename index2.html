@@ -74,8 +74,14 @@
 		});
 
 	</script>
-
 	
+	<script>
+	var d3Scale = d3.scale.linear() //產生一個線性尺度
+			.domain([10, 999]) //傳入的值
+			.range([0 , 100]) //輸出的範圍
+
+	console.log("輸出的值 = " + d3Scale(500))
+	</script>
 		
 	</div>
 
