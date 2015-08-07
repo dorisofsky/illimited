@@ -27,7 +27,7 @@
 				return (d*3)  + 'px' ;
 			})
 			.text(function(d,i){
-				return i ;
+				return d[0] ;
 			});
 
 		console.log(d3.select('.demo').selectAll('div'));
