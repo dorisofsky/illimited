@@ -24,7 +24,10 @@
 			.append('div') // 這邊加入的div已經有包含data
 			.attr('class','bar') //套用class
 			.style('height', function(d){ //將data的值取出作為高
-				return (d*3)  + 'px' + d[0];
+				return (d*3)  + 'px' ;
+			})
+			.text(function(d,i){
+				return i ;
 			});
 
 		console.log(d3.select('.demo').selectAll('div'));
