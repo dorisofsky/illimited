@@ -41,9 +41,9 @@
 		var svg = d3.select('.demo').append('svg').attr({'width': w,'height': h})
 		//接下來開始產生SVG
 
-		svg.selectAll('rect').data(dataset).enter() //和先前一樣，選取'circle'並把資料加入
-		.append('rect') // 增加圓到SVG內
-		.attr({	//加入屬性到圓
+		svg.selectAll('rect').data(dataset).enter() //和先前一樣，選取'rect'並把資料加入
+		.append('rect') // 增加方形到SVG內
+		.attr({	//加入屬性到方形
 			'x': function(d, i){return xScale(i)}, //利用尺度算出X的位置
 			'y': function(d){return h - yScale(d)}, //同理算出Y，但是要放在底部，所以要y-yScale(d)
 			'width': barWidth, //bar的寬度
