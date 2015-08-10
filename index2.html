@@ -110,7 +110,7 @@
 		'cx': function(d){return xScale(d[0])}, //利用尺度算出X的位置
 		'cy': function(d){return yScale(d[1])}, //同理算出Y
 		'r': function(d){return Math.sqrt(h - d[1])}, //圓的大小是高 - Y值的平方
-		'fill': function(d){return d3.hsl(d[0] % 360, .6, .6 );} 
+		'fill': function(d){return d3.hsl((d[0]*d[1]) % 360, .6, .6 );} 
 		//介紹一個顏色的function hsl，可以將顏色算出後轉成色碼
 		//格式 (360色相, 1彩度, 1明度)
 	});
