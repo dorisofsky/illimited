@@ -35,7 +35,7 @@
 			.range([padding, h - padding])
 			//類似X軸的尺度
 
-		var barWidth = (w - padding*2) / dataset.length ;
+		var barWidth = (w ) / dataset.length- barMargin ;
 		//算出每一個bar的寬度
 
 		var svg = d3.select('.demo').append('svg').attr({'width': w,'height': h})
