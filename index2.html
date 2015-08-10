@@ -48,8 +48,8 @@
 			'y': function(d){return h - yScale(d)}, //同理算出Y，但是要放在底部，所以要y-yScale(d)
 			'width': barWidth, //bar的寬度
 			'height':function(d){return yScale(d)}, //高度算法與Y相同
-			'fill': function(a){
-				var color = 0.2 + a * 0.002;
+			'fill': function(d){
+				var color = 0.5 + d * 0.002;
 				return  d3.hsl(300 ,color, color);
 			} 
 			//顏色的function hsl，可以將顏色算出後轉成色碼
@@ -62,7 +62,7 @@
 		.attr({
 			'x': function(d, i){return xScale(i) + barWidth/2},
 			//和上面相同，算出X、Y的位置
-			'y': function(d){return h - yScale(d) + 15}, //數值放在bar 內
+			'y': function(d){return h - yScale(d)}, //數值放在bar 內
 			'fill': 'white', //文字填滿為白色
 			'text-anchor': 'middle', //文字置中
 			'font-size': '10px' //Fill、font-size也可以用CSS寫喔～
