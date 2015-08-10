@@ -35,7 +35,7 @@
 			.range([padding, h - padding])
 			//類似X軸的尺度
 
-		var barWidth = (w ) / dataset.length ;
+		var barWidth = (w - padding*2) / dataset.length- barMargin ;
 		//算出每一個bar的寬度
 
 		var svg = d3.select('.demo').append('svg').attr({'width': w,'height': h})
@@ -50,7 +50,7 @@
 			'height':function(d){return yScale(d)}, //高度算法與Y相同
 			'fill': function(d){
 				var color = 0.2 + d * 0.002;
-				return  d3.hsl(200 ,color, color);
+				return  d3.hsl(300 ,color, color);
 			} 
 			//顏色的function hsl，可以將顏色算出後轉成色碼
 			//格式 (360色相, 1彩度, 1明度)
