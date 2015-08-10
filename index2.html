@@ -48,8 +48,8 @@
 			'y': function(d){return h - yScale(d)}, //同理算出Y，但是要放在底部，所以要y-yScale(d)
 			'width': barWidth, //bar的寬度
 			'height':function(d){return yScale(d)}, //高度算法與Y相同
-			'fill': function(d){
-				var color = 0.2 + d * 0.002;
+			'fill': function(a){
+				var color = 0.2 + a * 0.002;
 				return  d3.hsl(300 ,color, color);
 			} 
 			//顏色的function hsl，可以將顏色算出後轉成色碼
