@@ -117,7 +117,7 @@
 
 	svg.selectAll('text').data(dataset).enter() //補上資料數值
 	.append('text') 
-	.text(function(d){ return d[0]+ ',' + d[1]}) //將值寫到SVG上
+	.text(function(d){ return d[0]+ ' , ' + d[1]}) //將值寫到SVG上
 	.attr({
 		'x': function(d){return xScale(d[0])}, //和上面相同，算出X、Y的位置
 		'y': function(d){return yScale(d[1])},
